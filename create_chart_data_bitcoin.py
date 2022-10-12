@@ -215,8 +215,8 @@ def create_5_year():
 market = "bitstamp/"
 pricetype = "btcusd/"
 periodslist = {"1m":"60", "5m":"300", "1h":"3600", "4h":"14400", "1d":"86400", 
-            "1w":"604800","1m":"604800","3m":"604800",
-            "6m":"604800","1y":"604800","2y":"604800",
+            "1w":"604800","1M":"604800","3M":"604800",
+            "6M":"604800","1y":"604800","2y":"604800",
             "3y":"604800","5y":"604800"}
 period = sys.argv[1]
 start = sys.argv[2]
@@ -237,11 +237,11 @@ res = requests.get(url)
 data = json.loads(res.text)
 
 col = ['close_time', 'open_price', 'high_price', 'low_price', 'close_price', 'volume', 'quote_volume']
-if sys.argv[1] == '1m':
+if sys.argv[1] == '1M':
     df = create_1_month()
-elif sys.argv[1] == '3m':
+elif sys.argv[1] == '3M':
     df = create_3_month()
-elif sys.argv[1] == '6m':
+elif sys.argv[1] == '6M':
     df = create_6_month()
 elif sys.argv[1] == '1y':
     df = create_1_year()
