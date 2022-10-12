@@ -20,5 +20,5 @@ This script is to create BITCOIN chart and data for following period.
 
 ## Usage
 
-python create_chart_data_bitcoin.py &startdatetime(UST) &enddatetime(UST) &outputfile
+python create_chart_data_bitcoin.py &startdate(UST(dd/mm/yyyy)) &enddatet(UST dd/mm/yyyy) &outputfile
 
